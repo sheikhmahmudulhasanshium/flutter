@@ -1,0 +1,111 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter doctor
+
+## exception
+
+ArgumentError: Invalid argument(s): Cannot find executable for where.
+
+```
+#0      _getExecutable (package:process/src/interface/local_process_manager.dart:127:5)
+#1      LocalProcessManager.runSync (package:process/src/interface/local_process_manager.dart:94:30)
+#2      _WindowsUtils._which (package:flutter_tools/src/base/os.dart:239:49)
+#3      OperatingSystemUtils.whichAll (package:flutter_tools/src/base/os.dart:52:43)
+#4      AndroidSdk.locateAndroidSdk.findAndroidHomeDir (package:flutter_tools/src/android/android_sdk.dart:338:38)
+#5      AndroidSdk.locateAndroidSdk (package:flutter_tools/src/android/android_sdk.dart:362:53)
+#6      AppContext._generateIfNecessary.<anonymous closure> (package:flutter_tools/src/base/context.dart:100:41)
+#7      _LinkedHashMapMixin.putIfAbsent (dart:collection-patch/compact_hash.dart:293:23)
+#8      AppContext._generateIfNecessary (package:flutter_tools/src/base/context.dart:88:20)
+#9      AppContext.get (package:flutter_tools/src/base/context.dart:117:32)
+#10     AppContext.get (package:flutter_tools/src/base/context.dart:115:23)
+#11     AppContext.get (package:flutter_tools/src/base/context.dart:115:23)
+#12     androidSdk (package:flutter_tools/src/android/android_sdk.dart:19:38)
+#13     AndroidWorkflow.canListDevices (package:flutter_tools/src/android/android_workflow.dart:45:41)
+#14     AndroidDevices.canListAnything (package:flutter_tools/src/android/android_device.dart:62:47)
+#15     DeviceManager.canListAnything.<anonymous closure> (package:flutter_tools/src/device.dart:148:80)
+#16     Iterable.any (dart:core/iterable.dart:388:15)
+#17     DeviceManager.canListAnything (package:flutter_tools/src/device.dart:148:33)
+#18     _DefaultDoctorValidatorsProvider.validators (package:flutter_tools/src/doctor.dart:90:25)
+#19     Doctor.validators (package:flutter_tools/src/doctor.dart:145:46)
+#20     Doctor.startValidatorTasks (package:flutter_tools/src/doctor.dart:151:39)
+#21     Doctor.diagnose (package:flutter_tools/src/doctor.dart:252:41)
+#22     DoctorCommand.runCommand (package:flutter_tools/src/commands/doctor.dart:59:39)
+#23     FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:615:18)
+#24     _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/async_patch.dart:73:64)
+#25     _rootRunUnary (dart:async/zone.dart:1134:38)
+#26     _CustomZone.runUnary (dart:async/zone.dart:1031:19)
+#27     _FutureListener.handleValue (dart:async/future_impl.dart:139:18)
+#28     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:680:45)
+#29     Future._propagateToListeners (dart:async/future_impl.dart:709:32)
+#30     Future._completeWithValue (dart:async/future_impl.dart:524:5)
+#31     Future._asyncComplete.<anonymous closure> (dart:async/future_impl.dart:554:7)
+#32     _rootRun (dart:async/zone.dart:1126:13)
+#33     _CustomZone.run (dart:async/zone.dart:1023:19)
+#34     _CustomZone.runGuarded (dart:async/zone.dart:925:7)
+#35     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:965:23)
+#36     _microtaskLoop (dart:async/schedule_microtask.dart:43:21)
+#37     _startMicrotaskLoop (dart:async/schedule_microtask.dart:52:5)
+#38     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#39     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:175:5)
+```
+
+## flutter doctor
+
+```
+encountered exception: Invalid argument(s): Cannot find executable for where.
+
+#0      _getExecutable (package:process/src/interface/local_process_manager.dart:127:5)
+#1      LocalProcessManager.runSync (package:process/src/interface/local_process_manager.dart:94:30)
+#2      _WindowsUtils._which (package:flutter_tools/src/base/os.dart:239:49)
+#3      OperatingSystemUtils.whichAll (package:flutter_tools/src/base/os.dart:52:43)
+#4      AndroidSdk.locateAndroidSdk.findAndroidHomeDir (package:flutter_tools/src/android/android_sdk.dart:338:38)
+#5      AndroidSdk.locateAndroidSdk (package:flutter_tools/src/android/android_sdk.dart:362:53)
+#6      AppContext._generateIfNecessary.<anonymous closure> (package:flutter_tools/src/base/context.dart:100:41)
+#7      _LinkedHashMapMixin.putIfAbsent (dart:collection-patch/compact_hash.dart:293:23)
+#8      AppContext._generateIfNecessary (package:flutter_tools/src/base/context.dart:88:20)
+#9      AppContext.get (package:flutter_tools/src/base/context.dart:117:32)
+#10     AppContext.get (package:flutter_tools/src/base/context.dart:115:23)
+#11     androidSdk (package:flutter_tools/src/android/android_sdk.dart:19:38)
+#12     AndroidWorkflow.canListDevices (package:flutter_tools/src/android/android_workflow.dart:45:41)
+#13     AndroidDevices.canListAnything (package:flutter_tools/src/android/android_device.dart:62:47)
+#14     DeviceManager.canListAnything.<anonymous closure> (package:flutter_tools/src/device.dart:148:80)
+#15     Iterable.any (dart:core/iterable.dart:388:15)
+#16     DeviceManager.canListAnything (package:flutter_tools/src/device.dart:148:33)
+#17     _DefaultDoctorValidatorsProvider.validators (package:flutter_tools/src/doctor.dart:90:25)
+#18     Doctor.validators (package:flutter_tools/src/doctor.dart:145:46)
+#19     Doctor.startValidatorTasks (package:flutter_tools/src/doctor.dart:151:39)
+#20     Doctor.diagnose (package:flutter_tools/src/doctor.dart:252:41)
+#21     _doctorText.<anonymous closure> (package:flutter_tools/runner.dart:205:26)
+#22     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:146:29)
+#23     _rootRun (dart:async/zone.dart:1126:13)
+#24     _CustomZone.run (dart:async/zone.dart:1023:19)
+#25     _runZoned (dart:async/zone.dart:1518:10)
+#26     runZoned (dart:async/zone.dart:1465:12)
+#27     AppContext.run (package:flutter_tools/src/base/context.dart:145:18)
+#28     _doctorText (package:flutter_tools/runner.dart:204:19)
+#29     _createLocalCrashReport (package:flutter_tools/runner.dart:182:32)
+#30     _handleToolError (package:flutter_tools/runner.dart:138:31)
+<asynchronous suspension>
+#31     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:68:22)
+<asynchronous suspension>
+#32     _rootRun (dart:async/zone.dart:1126:13)
+#33     _CustomZone.run (dart:async/zone.dart:1023:19)
+#34     _runZoned (dart:async/zone.dart:1518:10)
+#35     runZoned (dart:async/zone.dart:1502:12)
+#36     run.<anonymous closure> (package:flutter_tools/runner.dart:61:18)
+<asynchronous suspension>
+#37     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:146:29)
+#38     _rootRun (dart:async/zone.dart:1126:13)
+#39     _CustomZone.run (dart:async/zone.dart:1023:19)
+#40     _runZoned (dart:async/zone.dart:1518:10)
+#41     runZoned (dart:async/zone.dart:1465:12)
+#42     AppContext.run (package:flutter_tools/src/base/context.dart:145:18)
+#43     runInContext (package:flutter_tools/src/context_runner.dart:64:24)
+#44     run (package:flutter_tools/runner.dart:50:10)
+#45     main (package:flutter_tools/executable.dart:65:9)
+#46     main (file:///C:/b/s/w/ir/k/archive/flutter/packages/flutter_tools/bin/flutter_tools.dart:8:3)
+#47     _startIsolate.<anonymous closure> (dart:isolate-patch/isolate_patch.dart:305:32)
+#48     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:174:12)
+```
